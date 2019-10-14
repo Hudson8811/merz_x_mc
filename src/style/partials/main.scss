@@ -11,7 +11,6 @@ body{
 	color: #00202b;
 	font-family: $font1;
 	margin: 0;
-	font-weight: 500;
 	font-size: 1vw;
 }
 
@@ -48,6 +47,7 @@ body{
 		text-transform: uppercase;
 		margin-top: 1.0416vw;
 		margin-left: 10.052083vw;
+		font-weight: 500;
 		.go-text{
 			color: #ffffff;
 			display: inline-block;
@@ -57,6 +57,8 @@ body{
 	}
 
 	.header-title{
+		width: 46.25vw;
+		margin-top: 5.10417vw;
 		.big{
 			font-family: $font2;
 			color: #ffffff;
@@ -64,14 +66,17 @@ body{
 			font-weight: 400;
 			text-transform: uppercase;
 			display: block;
+			line-height: 0.8;
 		}
 		.small{
 			color: #263a41;
-			font-size: 2.0833px;
+			font-size: 2.0833vw;
 			text-transform: uppercase;
-			letter-spacing: 0.2578125vw;
+			letter-spacing: 0.2vw;
 			display: block;
 			text-align: right;
+			line-height: 1;
+			font-weight: 500;
 		}
 	}
 
@@ -87,5 +92,31 @@ body{
 		}
 	}
 
+	.header-text{
+		width: 29.635416vw;
+		color: #00202b;
+		line-height: 1.6666vw;
+		font-size: 1.145833vw;
+		margin-top: 1.875vw;
+		>p{
+			margin-bottom: 1.0416vw;
+		}
+		.vdoh-link{
+			font-weight: 500;
+			letter-spacing: 0.10416px;
+			text-transform: uppercase;
+		}
+		.arrow-down{
+			margin-top: 1.30208vw;
+			a{
+				display: block;
+				width: 37px;
+				height: 37px;
+				background: url("../img/icon-arrow.png") center center no-repeat;
+				background-size: contain;
+				cursor: pointer;
+			}
+		}
+	}
 
 }
