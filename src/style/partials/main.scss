@@ -26,6 +26,7 @@ body{
 	background: url("../img/header_bg.jpg") center top no-repeat;
 	background-size: 100% auto;
 	padding-top: 3.4375vw;
+	min-height: 51.822916vw;
 	.header-row{
 		display: flex;
 		justify-content: space-between;
@@ -41,5 +42,50 @@ body{
 		}
 	}
 
-	
+	.header-info{
+		color: #ffffff;
+		font-size: 1.14583vw;
+		text-transform: uppercase;
+		margin-top: 1.0416vw;
+		margin-left: 10.052083vw;
+		.go-text{
+			color: #ffffff;
+			display: inline-block;
+			margin-top: 1.0416vw;
+			border-bottom: 1px solid #ff5900;
+		}
+	}
+
+	.header-title{
+		.big{
+			font-family: $font2;
+			color: #ffffff;
+			font-size: 8.85416vw;
+			font-weight: 400;
+			text-transform: uppercase;
+			display: block;
+		}
+		.small{
+			color: #263a41;
+			font-size: 2.0833px;
+			text-transform: uppercase;
+			letter-spacing: 0.2578125vw;
+			display: block;
+			text-align: right;
+		}
+	}
+
+	.right-img{
+		display: block;
+		width: 29.635416vw;
+		position: absolute;
+		right: 0;
+		top: 0;
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+
+
 }
