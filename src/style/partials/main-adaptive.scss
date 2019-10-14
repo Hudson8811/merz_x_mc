@@ -1,0 +1,538 @@
+@media screen and (max-width:1024px) {
+  body{
+    overflow-x: hidden;
+  }
+  .section-1{
+    background-image: url("../images/bg-1-2.jpg");
+    height: 159.5vw;
+    .logo-row{
+      padding-top: 4.166vw;
+      .left{
+        display: none;
+      }
+      .center{
+        width: 100%;
+        img{
+          width: 32.03125vw;
+        }
+      }
+      .right{
+        display: none;
+      }
+    }
+
+    .text-block{
+      margin-top: 5.2vw;
+      .title{
+        font-size: 8.203125vw;
+        width: 46.875vw;
+        padding-left: 46.875vw;
+        text-align: left;
+      }
+      .text{
+        margin: 11.71875vw auto 0;
+        width: 88.5416vw;
+        font-size: 2.734375vw;
+        line-height: initial;
+      }
+    }
+
+    .head{
+      width: 44.7916vw;
+      top: 13.671875vw;
+      left: 2.2135vw;
+    }
+    .hand{
+      width: 148.9583vw;
+      top: 91.536458vw;
+      left: 24.73958vw;
+    }
+
+    .to-test{
+      margin-top: 48.177vw;
+      .text{
+        font-size: 3.515625vw;
+      }
+      .img{
+        margin-top: 4.55729vw;
+        img{
+          width: 4.6875vw;
+        }
+      }
+    }
+  }
+
+  .section-result{
+    padding: 2.60416vw 0;
+
+    .border-block{
+      width: 91.1458vw;
+      height: 70.2314vw;
+      border-radius: 2.6vw;
+      padding: 1.826557vw 0 2.7398vw;
+      .title{
+        font-size: 3.653vw;
+      }
+      .text{
+        font-size: 3.19646vw;
+      }
+
+      .line-block{
+        right: 20.09225vw;
+        top: 11.87269vw;
+        .line{
+          width: 3.2878vw;
+        }
+        .mig{
+          left: -5.26042vw;
+          bottom: 3.397358vw;
+
+          .procent{
+            width: 13.699vw;
+            height: 6.94078vw;
+          }
+        }
+      }
+
+
+      .head-1{
+        width: 64.11257vw;
+        left: 2.7398vw;
+        top: 5.9363vw;
+      }
+      .head-2{
+        width: 64.11257vw;
+        left: 2.7398vw;
+        top: 5.9363vw;
+      }
+      .head-3{
+        width: 64.11257vw;
+        left: 2.7398vw;
+        top: 5.9363vw;
+      }
+
+      .min-img{
+        width: 17.9vw;
+        position: absolute;
+        left: 10.2743vw;
+        top: 44.2066vw;
+      }
+
+      &.result-1{
+        .line-block {
+          .mig {
+            bottom: 3.397358vw;
+          }
+        }
+      }
+      &.result-2{
+        .line-block {
+          .mig {
+            bottom: 15.8178vw;
+          }
+        }
+      }
+      &.result-3{
+        .line-block {
+          .mig {
+            bottom: 29.1515vw;
+          }
+        }
+      }
+
+
+    }
+
+    .share{
+      margin-top: 4.10978vw;
+      .text{
+        font-size: 3.5vw;
+      }
+      .flex-block{
+        margin-top: 0.4vw;
+        a{
+          height: 10vw;
+          width: 10vw;
+          margin-top: 0;
+          +a{
+            margin-left: 1.22745vw;
+          }
+        }
+      }
+
+    }
+  }
+
+  .section-2{
+    height: 93.0989vw;
+    .arr-left{
+      display: none;
+    }
+    .arr-right{
+      display: none;
+    }
+
+    .mig-circle{
+      display: none !important;
+    }
+
+
+    .on-mobile-text{
+      display: block;
+      width: 52.60416vw;
+      font-size: 2.8vw;
+      text-align: center;
+      line-height: 1.2;
+      margin: 0 auto 2.4vw;
+    }
+  }
+
+  .section-3{
+    padding: 6.25vw 0;
+    .border-block{
+      width: 91.1458vw;
+      border-radius: 2.6vw;
+      padding: 3.90625vw 2.083vw;
+      .ves{
+        display: none;
+      }
+      .title{
+        font-size: 5.46875vw;
+      }
+      > .text{
+        width: 69vw;
+        font-size: 3.90625vw;
+        margin: 0 auto;
+      }
+      .line-block{
+        height: 29.427vw;
+        background-position: bottom 3.90625vw center;
+        .smile{
+          width: 11.0677vw;
+          position: absolute;
+          top: 1.8vw;
+          left: -2.15%;
+          transition: none;
+          .img{
+            height: 24vw;
+            width: 11.0677vw;
+          }
+          .text{
+            font-size: 3.90625vw;
+            margin-top: -2vw;
+          }
+
+          &.pos-1{left: -2.15%;}
+          &.pos-2{left: 1.9%;}
+          &.pos-3{left: 6.1%;}
+          &.pos-4{left: 10.15%;}
+          &.pos-5{left: 16.9%;}
+          &.pos-6{left: 21%;}
+          &.pos-7{left: 25.1%;}
+          &.pos-8{left: 29.2%;}
+          &.pos-9{left: 35.9%;}
+          &.pos-10{left: 40%;}
+          &.pos-11{left: 44.1%;}
+          &.pos-12{left: 48.3%;}
+          &.pos-13{left: 54.9%;}
+          &.pos-14{left: 59%;}
+          &.pos-15{left: 63.1%;}
+          &.pos-16{left: 67.3%;}
+          &.pos-17{left: 74.9%;}
+          &.pos-18{left: 79%;}
+          &.pos-19{left: 83.2%;}
+          &.pos-20{left: 87.3%;}
+        }
+      }
+      .question{
+        margin-top: 2vw;
+        font-size: 3.90625vw;
+        min-height: 2em;
+      }
+    }
+  }
+
+  .section-4{
+    padding: 5.598958vw 0 4.1666vw;
+    .flex-block{
+      width: 91.1459vw;
+      .text{
+        font-size: 4.55729vw;
+        width: 47.526vw;
+        padding-left: 0;
+        padding-top: 0;
+      }
+      .img{
+        width: 40.49479vw;
+      }
+    }
+  }
+
+  .section-5{
+    padding-top: 2.6vw;
+    .title{
+      font-size: 5.46875vw;
+      width: 67.7vw;
+      margin: 0 auto;
+    }
+    .block{
+      .text{
+        font-size: 4.55729vw !important;
+        width: 82.03125vw !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+        text-align: center;
+      }
+    }
+
+    .block-1{
+      padding: 1.3vw 0 7.161458vw;
+      .flex-block{
+        flex-direction: column;
+        align-items: center;
+        img{
+          width: 52.34375vw;
+        }
+        .text-block{
+          text-align: center;
+          width: 100%;
+          margin: 0;
+          .big{
+            font-size: 10.416vw;
+          }
+        }
+      }
+    }
+
+    .block-2{
+      padding: 5.859375vw 0;
+      .flex-block{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .left{
+          display: block;
+          text-align: center;
+          .big{
+            font-size: 22.3958vw;
+            margin-bottom: 3vw;
+            span{
+              font-size: 14.583vw;
+            }
+          }
+        }
+        .right{
+          margin-left: 0;
+          margin-top: 7.8125vw;
+          .big{
+            font-size: 22.3958vw;
+            margin-bottom: 3vw;
+            span{
+              font-size: 14.583vw;
+            }
+          }
+        }
+      }
+    }
+
+    .block-3{
+      padding: 3.2552vw 0 7.161458vw;
+      .flex-block{
+        flex-direction: column-reverse;
+        img{
+          width: 79.427vw;
+          margin-left: 0;
+        }
+        .text{
+          padding-left: 0;
+          p + p{
+            margin-top: 3.9vw;
+          }
+        }
+      }
+    }
+
+    .block-4{
+      padding: 4.1666vw 0 7.552vw;
+      .flex-block{
+        flex-direction: column-reverse;
+        img{
+          width: 89.9739vw;
+          margin-bottom: 7.812vw;
+        }
+      }
+    }
+  }
+
+  .section-6{
+    padding: 3.90625vw 0 4.557vw;
+    .text{
+      font-weight: 300;
+      p{
+        font-size: 4.55729vw;
+      }
+      span{
+        font-size: 12.36979vw;
+      }
+    }
+    .statue{
+      display: none;
+    }
+  }
+
+  .section-7{
+    padding-top: 4.427083vw;
+    &::after{
+      bottom: 3.3854vw;
+    }
+    .woman-bg{
+      width: 100%;
+      height: 95vw;
+      background-size: 109.5vw 100%;
+      background-position: right top;
+      .text{
+        font-size: 4.55729vw;
+        text-align: left;
+        width: 55.98958vw;
+        padding: 11.71875vw 0 0 9vw;
+        line-height: 1.2;
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .section-8{
+    padding-bottom: 7.8125vw;
+    .flex-block{
+      flex-direction: column;
+      .head{
+        width: 52.2135vw;
+      }
+      .text{
+        font-size: 4.55729vw;
+        width: 82.03125vw;
+        padding: 0;
+        margin: 3.90625vw auto 0;
+      }
+    }
+  }
+
+  .section-9{
+    height:100.49479vw;
+    background: url("../images/bg-1-2.jpg") center top no-repeat;
+    background-size: cover;
+    .head{
+      width: 38.8vw;
+      top: 6.77vw;
+      left: 3.90625vw;
+    }
+    .hand{
+      width: 122.65625vw;
+      left: 30.989vw;
+      top: 43.48958vw;
+    }
+    .vendor{
+      width: 31.9vw;
+      left: 10.677083vw;
+      top: 73.046875vw;
+    }
+    .text-block{
+      width: 52.08vw;
+      padding-top: 0;
+      position: absolute;
+      top: 14.0625vw;
+      right: 6.510416vw;
+      img{
+        width: 35.286458vw;
+      }
+      .text{
+        margin-top: 1vw;
+        font-size: 6.90104vw;
+        line-height: 7.34635vw;
+      }
+    }
+    .text-bot{
+      margin-top: 83.66vw;
+      font-size: 5.46875vw;
+    }
+  }
+
+
+
+  .copy{
+    padding-top: 3.3333312vw;
+    padding-bottom: 5.20833vw;
+    .text{
+      font-size: 2.0833vw;
+    }
+  }
+
+
+
+  .index__test {
+    padding-top: 3.36979vw;
+  }
+
+  .index__test .test__inner {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+
+  .index__test .test__inner .test__button.left {
+    width: 22.1354vw;
+    position: absolute;
+    left: 2.34375vw;
+    top: 38.54166vw;
+    z-index: 20;
+  }
+  .index__test .test__inner .test__button.right {
+    width: 20.5729vw;
+    position: absolute;
+    right: 2.34375vw;
+    top: 38.54166vw;
+    z-index: 20;
+  }
+
+  .index__test .test__inner .test__cards {
+    position: relative;
+    width: 71.484375vw;
+    height: 78.776vw;
+    line-height: 78.776vw;
+  }
+
+
+  .test-card {
+    width: 71.484375vw;
+    height: 78.776vw;
+    padding: 2.6vw;
+    &::before{
+      width: calc(100% - 5.2vw);
+      height: calc(100% - 5.2vw);
+      top: 2.6vw;
+      left: 2.6vw;
+    }
+
+    .test__number{
+      font-size: 3.515625vw;
+      margin-top: 5.859375vw;
+      &::before, &::after{
+        width: 7.8125vw;
+        margin: 0 0.6vw;
+      }
+    }
+    .card__pic{
+      width: 52.60416vw;
+      margin: 5.859375vw auto;
+    }
+    .card__text{
+      width: 52.60416vw;
+      font-size: 3.125vw;
+    }
+  }
+
+}
+

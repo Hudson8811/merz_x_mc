@@ -1,0 +1,45 @@
+$font1: "Futura PT", sans-serif;
+$font3: "Futura PT Cond";
+$font4: "Futura PT Demi";
+$font2: "Misto";
+
+a{
+	text-decoration: none;
+}
+
+body{
+	color: #00202b;
+	font-family: $font1;
+	margin: 0;
+	font-weight: 500;
+	font-size: 1vw;
+}
+
+.container{
+	width: 79.84375vw;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+.section-1{
+	background: url("../img/header_bg.jpg") center top no-repeat;
+	background-size: 100% auto;
+	padding-top: 3.4375vw;
+	.header-row{
+		display: flex;
+		justify-content: space-between;
+		width: 42.70833vw;
+		align-items: flex-start;
+		.logo{
+			width: 9.427083vw;
+			display: block;
+		}
+		.brand{
+			width: 5.72916vw;
+			display: block;
+		}
+	}
+
+	
+}
