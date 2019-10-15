@@ -267,6 +267,10 @@ body{
 				box-sizing: border-box;
 				width: 14.27083vw;
 				padding: 1vw 0 1vw 1.7vw;
+
+				overflow: hidden;
+				position: relative;
+				height: 100%;
 				.cat{
 					color: #7f8f95;
 					font-size: 0.833vw;
@@ -350,10 +354,6 @@ body{
 						}
 					}
 				}
-			}
-			overflow: hidden;
-			*{
-				transition: all 0.15s linear;
 			}
 			@media all and (min-width: 1024px) {
 				&:hover{

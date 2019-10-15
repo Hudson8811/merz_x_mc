@@ -19,6 +19,24 @@ $(document).ready(function() {
     });
 
 
+    var ps;
+
+
+    $('.articles .right').hover(function () {
+        if (ps) ps.destroy();
+        ps = new PerfectScrollbar(this, {
+            wheelPropagation : false,
+            swipeEasing: true,
+            suppressScrollX: true
+        });
+    },function () {
+        if (ps) ps.destroy();
+        ps = null;
+    });
+
+
+
+
 });
 
 currentQuestion = 1;
