@@ -1,0 +1,24 @@
+{"test":
+  [
+    {"left":[{"label":"Кофе","value":"1"}],"right":[{"label":"Чай","value":"2"}],"image":"img4"},
+    {"left":[{"label":"Бродский","value":"2"}],"right":[{"label":"Маяковский","value":"1"}],"image":""},
+    {"left":[{"label":"Моцарт","value":"2"}],"right":[{"label":"Монеточка","value":"1"}],"image":""},
+    {"left":[{"label":"Шарф","value":"2"}],"right":[{"label":"Снуд","value":"1"}],"image":""},
+    {"left":[{"label":"Вечер в кино","value":"2"}],"right":[{"label":"Премьера в театре","value":"1"}],"image":"img6"},
+    {"left":[{"label":"Помпоны","value":"2"}],"right":[{"label":"Бахрома","value":"1"}],"image":""},
+    {"left":[{"label":"Туфли Мэри Джейн","value":"2"}],"right":[{"label":"Туфли на платформе","value":"1"}],"image":""},
+    {"left":[{"label":"Поэзия","value":"2"}],"right":[{"label":"Проза","value":"1"}],"image":""},
+    {"left":[{"label":"Открытый бассейн","value":"1"}],"right":[{"label":"Теплая ванна","value":"2"}],"image":"img7"},
+    {"left":[{"label":"Фикшн","value":"1"}],"right":[{"label":"Нон-фикшн","value":"2"}],"image":""},
+    {"left":[{"label":"Кулинарный мастер-класс","value":"2"}],"right":[{"label":"Ужин в ресторане","value":"1"}],"image":""},
+    {"left":[{"label":"Вечер настольных игр","value":"1"}],"right":[{"label":"Вечер настольных игр","value":"2"}],"image":""},
+    {"left":[{"label":"Городские бульвары","value":"1"}],"right":[{"label":"Грибные места","value":"2"}],"image":"img5"},
+    {"left":[{"label":"Суп из тыквы","value":"2"}],"right":[{"label":"Суп из тыквы","value":"1"}],"image":""},
+    {"left":[{"label":"Камин и плед","value":"1"}],"right":[{"label":"Костер и печеная картошка","value":"2"}],"image":""},
+    {"left":[{"label":"Корица","value":"2"}],"right":[{"label":"Имбирь","value":"1"}],"image":""},
+    {"left":[{"label":"Астры","value":"1"}],"right":[{"label":"Сухоцветы","value":"2"}],"image":"img3"},
+    {"left":[{"label":"Апельсиновый фреш","value":"1"}],"right":[{"label":"Чай с шиповником","value":"2"}],"image":""},
+    {"left":[{"label":"Фотосессия в осенних листьях","value":"1"}],"right":[{"label":"Гербарий из листьев","value":"2"}],"image":""},
+    {"left":[{"label":"Обертывание","value":"2"}],"right":[{"label":"Спортивный массаж","value":"1"}],"image":""}
+  ]
+}

@@ -166,6 +166,7 @@ body{
 		.tab{
 			width: auto;
 			height: 1.302vw;
+			line-height: 1.302vw;
 			opacity: 0.5;
 			color: #00202b;
 			font-size: 0.9375vw;
@@ -270,6 +271,12 @@ body{
 					font-weight: 400;
 					line-height: 1;
 					margin: 1.04166vw 0;
+					a{
+						color: #00202b;
+						&:hover{
+							color: #ff5900;
+						}
+					}
 				}
 				.more{
 					color: #00202b;
@@ -361,7 +368,6 @@ body{
 	width: 100%;
 	padding: 3.4375vw 0 5.2083vw;
 	background-color: #f3ecdc;
-	min-height: 48.9583vw;
 	.test{
 		.top-line{
 			display: flex;
@@ -414,7 +420,7 @@ body{
 				img{
 					pointer-events: none;
 					user-select: none;
-					display: block;
+					display: none;
 					position: absolute;
 					&.img1{left: 10.052vw; top: 5.78125vw; width: 26.614583vw;}
 					&.img2{left: 0; top: 2.864583vw; width: 35.46875vw;}
@@ -423,6 +429,9 @@ body{
 					&.img5{left: 23.64583vw; top: 14.21875vw; width: 20.260416vw;}
 					&.img6{left: 7.65625vw; top: 0; width: 22.8125vw;}
 					&.img7{left: 0.4166vw; top: 11.875vw; width: 27.03125vw;}
+					&.active, &.hover{
+						display: block !important;
+					}
 				}
 			}
 			.right,
@@ -432,7 +441,7 @@ body{
 				justify-content: center;
 				text-align: center;
 				width: 14.9479vw;
-				height: 5.78125vw;
+				min-height: 5.78125vw;
 				border: 1px solid #00172a;
 				cursor: pointer;
 				color: #00202b;
@@ -440,6 +449,8 @@ body{
 				font-weight: 400;
 				position: absolute;
 				top: 8.17708vw;
+				line-height: 1;
+				user-select: none;
 				&:hover{
 					border-color: #ff5900;
 				}
@@ -453,6 +464,8 @@ body{
 		}
 	}
 	.results{
+		display: none;
+		min-height: 48.9583vw;
 		.logo{
 			width: 5.72916vw;
 			position: absolute;
@@ -461,6 +474,9 @@ body{
 		}
 		.title-mobile{
 			display: none;
+			@media all and (min-width: 1024px) {
+				display: none !important;
+			}
 		}
 
 		.left{
@@ -474,7 +490,7 @@ body{
 				img{
 					pointer-events: none;
 					user-select: none;
-					display: block;
+					display: none;
 					position: absolute;
 					&.img1{left: 10.052vw; top: 5.78125vw; width: 26.614583vw;}
 					&.img2{left: 0; top: 2.864583vw; width: 35.46875vw;}
@@ -483,6 +499,9 @@ body{
 					&.img5{left: 23.64583vw; top: 14.21875vw; width: 20.260416vw;}
 					&.img6{left: 7.65625vw; top: 0; width: 22.8125vw;}
 					&.img7{left: 0.4166vw; top: 11.875vw; width: 27.03125vw;}
+					&.active{
+						display: block !important;
+					}
 				}
 			}
 			.share{
@@ -524,12 +543,15 @@ body{
 		.right{
 			margin-left: 40.2604vw;
 			padding-top: 0.78125vw;
+			display: none;
 			.title{
 				color: #00202b;
 				font-size: 1.14583vw;
 				font-weight: 500;
 				text-transform: uppercase;
 				letter-spacing: 0.10416vw;
+				z-index: 1;
+				position: relative;
 				span{
 					display: block;
 					color: #00202b;
@@ -555,6 +577,9 @@ body{
 					&:hover{
 						border-color: transparent;
 					}
+				}
+				span{
+					border-bottom: 2px solid #ff5900;
 				}
 				.other{
 					text-transform: uppercase;

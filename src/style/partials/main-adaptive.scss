@@ -72,14 +72,17 @@
     bottom: 0;
     left: 0;
     z-index: 10;
+    color: #ffffff;
+    max-width: 100%;
+    box-sizing: border-box;
     .container{
-      color: #ffffff;
-      font-size: 1.14583vw;
-      width: 100%;
+      font-size: 3.75vw;
+      width: auto;
       justify-content: space-between;
       .left{
         width: 57vw;
         text-align: left;
+        color: #ffffff;
       }
       .right{
         margin-left: 0;
@@ -105,11 +108,12 @@
     }
 
     .tabs{
-      padding-left: 6.25vw;
+      padding-left: 17.1875vw;
       .tab{
         height: 7.8125vw;
-        font-size: 0.9375vw;
-        letter-spacing: 0.07vw;
+        font-size: 4.6875vw;
+        letter-spacing: 0.35vw;
+        line-height: 7.8125vw;
         +.tab{
           margin-left: 9.6875vw;
         }
