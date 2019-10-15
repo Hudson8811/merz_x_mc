@@ -258,8 +258,7 @@ function nextQuest() {
         var resultSend = JSON.stringify( testResults );
         $.ajax({
             type: "POST",
-            //url: "lihk_to_result.php",
-            url: "http://localhost/results.php",
+            url: "lihk_to_result.php",
             data: { ansver : resultSend },
             success: function(data) {
                 console.log('success');
