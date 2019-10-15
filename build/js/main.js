@@ -61,6 +61,24 @@ $(document).ready(function() {
         spaceBetween: 0
     });
 
+    swiper.on('slideChangeTransitionStart', function () {
+        var cat = $('.swiper-slide-active').data('cat');
+        if (!cat) cat = 1;
+        var target = $('.tabs .tab[data-cat="'+cat+'"]');
+        console.log(target);
+        $(".button-prev").appendTo(target);
+        $(".button-next").appendTo(target);
+        $('.tabs .tab').removeClass('active');
+        target.addClass('active');
+
+        var first = $('.tabs .swiper-wrapper').offset().left;
+        var second = target.offset().left;
+        var distance = first - second;
+
+        $( ".tabs .swiper-wrapper" ).animate({
+            left: distance,
+        }, 100);
+    });
 
     $('.tabs .tab span').click(function () {
         var target = $(this).parent();
@@ -258,10 +276,15 @@ function nextQuest() {
         var resultSend = JSON.stringify( testResults );
         $.ajax({
             type: "POST",
-            url: "lihk_to_result.php",
+            url: " /save_collage/ ",
             data: { ansver : resultSend },
             success: function(data) {
                 console.log('success');
+                var parse = JSON.parse(data);
+                results = parse.results;
+                $('.results .social').attr('data-url', results[0].url);
+                $('.results .social').attr('data-image', results[0].image);
+                $('.results .social').attr('data-description', results[0].description);
             }
         });
     }
