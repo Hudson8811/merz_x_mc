@@ -5,6 +5,59 @@ $(document).ready(function() {
     });
 
 
+    $('.tabs .tab span').click(function () {
+        var target = $(this).parent();
+        changeTab(target);
+    });
+
+    $('.button-prev').click(function () {
+        if (!$(this).parent().is(':first-child')){
+            var target = $(this).parent().prev();
+            changeTab(target);
+        }
+    });
+
+    $('.button-next').click(function () {
+        if (!$(this).parent().is(':last-child')){
+            var target = $(this).parent().next();
+            changeTab(target);
+        }
+    });
+
+    function changeTab(target) {
+        var cat = target.data('cat');
+        $('.articles').find('.swiper-slide[data-cat="'+cat+'"]').first().addClass('goTo');
+        swiper.slideTo(getSlideIndexByClass('goTo'));
+        $(".button-prev").appendTo(target);
+        $(".button-next").appendTo(target);
+        $('.tabs .tab').removeClass('active');
+        target.addClass('active');
+
+        var first = $('.tabs .swiper-wrapper').offset().left;
+        var second = target.offset().left;
+        var distance = first - second;
+        console.log(first, second, distance);
+
+        $( ".tabs .swiper-wrapper" ).animate({
+            left: distance,
+        }, 100, function() {
+            // Animation complete.
+        });
+    }
+
+    function getSlideIndexByClass(className) {
+        var index2 = 0;
+        $.each($('.articles .swiper-wrapper').children(), function(i, item) {
+            if ($(item).hasClass(className)) {
+                index = i;
+                $(item).removeClass('goTo');
+                return false;
+            }
+        });
+        return index;
+    }
+
+
     $('.scroll').on('click', function () {
         var el = $(this);
         var dest = el.attr('href'); // получаем направление
@@ -19,9 +72,8 @@ $(document).ready(function() {
     });
 
 
+
     var ps;
-
-
     $('.articles .right').hover(function () {
         if (ps) ps.destroy();
         ps = new PerfectScrollbar(this, {
@@ -33,6 +85,7 @@ $(document).ready(function() {
         if (ps) ps.destroy();
         ps = null;
     });
+
 
 
 
@@ -74,6 +127,8 @@ $('.test-main .left, .test-main .right').hover(function () {
     $('.test-main .img-block img').removeClass('hover');
 });
 
+testResults = [];
+
 $('.test-main .left, .test-main .right').click(function () {
     var value = $(this).data('value');
     if (isImg == 1){
@@ -82,8 +137,10 @@ $('.test-main .left, .test-main .right').click(function () {
     }
     if (value == 1){
         otvet1++;
+        testResults.push(value);
     } else {
         otvet2++;
+        testResults.push(value);
     }
     nextQuest();
 });
@@ -112,5 +169,18 @@ function nextQuest() {
             $('.results2').show();
         }
         $('.results').slideDown();
+
+
+        //отправка данных
+        var resultSend = JSON.stringify( testResults );
+        $.ajax({
+            type: "POST",
+            //url: "lihk_to_result.php",
+            url: "http://localhost/results.php",
+            data: { ansver : resultSend },
+            success: function(data) {
+                console.log('success');
+            }
+        });
     }
 }
