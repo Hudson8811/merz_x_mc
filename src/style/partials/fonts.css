@@ -7,7 +7,15 @@
     font-style: normal;
 }
 
-
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Medium'), local('FuturaPT-Medium'),
+    url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+/*
 @font-face {
     font-family: 'Futura PT';
     src: local('Futura PT Heavy'), local('FuturaPT-Heavy'),
@@ -35,14 +43,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Futura PT';
-    src: local('Futura PT Medium'), local('FuturaPT-Medium'),
-    url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
-    url('../fonts/FuturaPT-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'Futura PT Demi';
@@ -50,15 +51,6 @@
     url('../fonts/FuturaPT-Demi.woff2') format('woff2'),
     url('../fonts/FuturaPT-Demi.woff') format('woff');
     font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Misto';
-    src: local('Misto Regular'), local('Misto'),
-    url('../fonts/Misto.woff2') format('woff2'),
-    url('../fonts/Misto.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
 
@@ -71,3 +63,14 @@
     font-style: normal;
 }
 
+*/
+
+
+@font-face {
+    font-family: 'Misto';
+    src: local('Misto Regular'), local('Misto'),
+    url('../fonts/Misto.woff2') format('woff2'),
+    url('../fonts/Misto.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
