@@ -111,8 +111,8 @@ body{
 			margin-top: 1.30208vw;
 			a{
 				display: block;
-				width: 37px;
-				height: 37px;
+				width: 1.927vw;
+				height: 1.927vw;
 				background: url("../img/icon-arrow.png") center center no-repeat;
 				background-size: contain;
 				cursor: pointer;
@@ -158,6 +158,9 @@ body{
 	padding-bottom: 7.2916vw;
 	padding-top: 2.083vw;
 
+	.mobile-text{
+		display: none;
+	}
 	.tabs{
 		padding-left: 20.052vw;
 		.tab{
@@ -204,7 +207,7 @@ body{
 		span{
 			color: #00202b;
 			font-family: $font2;
-			font-size: 130px;
+			font-size: 6.770833vw;
 			font-weight: 400;
 			text-transform: uppercase;
 			display: block;
@@ -253,7 +256,7 @@ body{
 				justify-content: center;
 				box-sizing: border-box;
 				width: 14.27083vw;
-				padding: 1.5625vw 2.34375vw;
+				padding: 1vw 0 1vw 1.7vw;
 				.cat{
 					color: #7f8f95;
 					font-size: 0.833vw;
@@ -263,7 +266,7 @@ body{
 				}
 				.title{
 					color: #00202b;
-					font-size: 2.2916vw;
+					font-size: 2.083vw;
 					font-weight: 400;
 					line-height: 1;
 					margin: 1.04166vw 0;
@@ -328,12 +331,12 @@ body{
 			}
 			@media all and (min-width: 1024px) {
 				&:hover{
-					height: auto;
 					.img{
 						opacity: 0;
 						width: 0;
 					}
 					.right{
+						display: block;
 						width: 33.85416vw;
 						border: 1px solid #00202b;
 						background-color: #ffffff;
@@ -456,6 +459,9 @@ body{
 			left: 0;
 			top: 0;
 		}
+		.title-mobile{
+			display: none;
+		}
 
 		.left{
 			position: absolute;
@@ -537,7 +543,7 @@ body{
 				margin-left: 9.739583vw;
 				margin-top: 1.04166vw;
 				color: #00202b;
-				font-size: 22px;
+				font-size: 1.14583vw;
 				font-weight: 400;
 				line-height: 1.71875vw;
 				>p{
