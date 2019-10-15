@@ -24,6 +24,26 @@ $(document).ready(function() {
         }
     });
 
+
+    $(".tabs .swiper-wrapper").swipe( {
+        swipe:function(event, direction, distance, duration, fingerCount){
+            if (direction == 'left') {
+                if (!$(this).find('.tab.active').is(':last-child')){
+                    var target = $(this).find('.tab.active').next();
+                    changeTab(target);
+                }
+            }
+            if (direction == 'right') {
+                if (!$(this).find('.tab.active').is(':first-child')){
+                    var target = $(this).find('.tab.active').prev();
+                    changeTab(target);
+                }
+            }
+        },
+        triggerOnTouchEnd:false,
+        threshold:150
+    });
+
     function changeTab(target) {
         var cat = target.data('cat');
         $('.articles').find('.swiper-slide[data-cat="'+cat+'"]').first().addClass('goTo');
@@ -36,13 +56,10 @@ $(document).ready(function() {
         var first = $('.tabs .swiper-wrapper').offset().left;
         var second = target.offset().left;
         var distance = first - second;
-        console.log(first, second, distance);
 
         $( ".tabs .swiper-wrapper" ).animate({
             left: distance,
-        }, 100, function() {
-            // Animation complete.
-        });
+        }, 100);
     }
 
     function getSlideIndexByClass(className) {
