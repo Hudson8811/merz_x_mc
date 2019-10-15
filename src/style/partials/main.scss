@@ -176,11 +176,20 @@ body{
 			cursor: pointer;
 			position: relative;
 			user-select: none;
-			&.swiper-slide-active{
+			transition: margin 0.3s linear;
+			&.active{
 				opacity: 1;
 			}
 			+.tab{
 				margin-left: 4.947916vw;
+			}
+			+&.active{
+				margin-left: 6.25vw;
+			}
+			&.active{
+				+.tab{
+					margin-left: 6.25vw;
+				}
 			}
 		}
 		.button-next,
@@ -292,6 +301,16 @@ body{
 					font-weight: 400;
 					p{
 						margin-bottom: 1.5625vw;
+						a{
+							color: #00202b;
+							border-bottom: 2px solid #ff5900;
+							&:hover{
+								border-color: transparent;
+							}
+						}
+						span{
+							border-bottom: 2px solid #ff5900;
+						}
 					}
 				}
 				.share{

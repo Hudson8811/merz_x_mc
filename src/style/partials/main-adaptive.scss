@@ -95,7 +95,7 @@
   }
 
   .section-3{
-    padding-bottom: 31.25vw;
+    padding-bottom: 0;
     padding-top: 15.625vw;
 
     .mobile-text{
@@ -116,6 +116,14 @@
         line-height: 7.8125vw;
         +.tab{
           margin-left: 9.6875vw;
+        }
+        +&.active{
+          margin-left: 20vw;
+        }
+        &.active{
+          +.tab{
+            margin-left: 20vw;
+          }
         }
       }
       .button-next,
@@ -146,9 +154,9 @@
         display: none;
       }
       .item{
-        margin-left: 16.5625vw;
-        &:first-of-type{
-          margin-left: 0;
+        margin-left: 0;
+        +.item{
+          margin-left: 16.5625vw;
         }
         display: block;
         height: auto;
@@ -296,7 +304,7 @@
 
       .left{
         position: static;
-        width: 91.875vw;
+        width: 100%;
         margin: 4.6875vw auto 0;
         .img-block{
           height: 60vw;
