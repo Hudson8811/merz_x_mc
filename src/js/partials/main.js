@@ -219,14 +219,14 @@ function nextQuest() {
         var resultSend = JSON.stringify( testResults );
         $.ajax({
             type: "POST",
-            url: " /save_collage/ ",
+            url: "/save_collage/",
             data: { ansver : resultSend },
             success: function(data) {
-                console.log('success');
                 var parse = JSON.parse(data);
-                results = parse.results;
+                results = parse.share;
                 $('.results .social').attr('data-url', results[0].url);
                 $('.results .social').attr('data-image', results[0].image);
+                $('.results .social').attr('data-title', results[0].title);
                 $('.results .social').attr('data-description', results[0].description);
             }
         });
