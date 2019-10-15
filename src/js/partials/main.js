@@ -105,6 +105,15 @@ $(document).ready(function() {
 
 
 
+    $('.articles .item').click(function () {
+       if ($( window ).width() < 1024){
+           $.fancybox.open({
+               src  : $(this).find('.right'),
+               type : 'inline',
+           });
+       }
+    });
+
 
 
 });
