@@ -112,7 +112,7 @@ $(document).ready(function() {
     $('.articles .right').hover(function () {
         if (ps) ps.destroy();
         ps = new PerfectScrollbar(this, {
-            wheelPropagation : false,
+            wheelPropagation : true,
             swipeEasing: true,
             suppressScrollX: true
         });
@@ -232,3 +232,9 @@ function nextQuest() {
         });
     }
 }
+
+new fullpage('#fullpage', {
+
+});
+
+//fullpage_api.setAllowScrolling(false);
