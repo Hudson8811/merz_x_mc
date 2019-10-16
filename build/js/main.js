@@ -68,6 +68,62 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 /* my scripts */
 
 $(document).ready(function() {
+    function detectmob() {
+        if (navigator.userAgent.match(/Android/i) ||
+            navigator.userAgent.match(/webOS/i) ||
+            navigator.userAgent.match(/iPhone/i) ||
+            navigator.userAgent.match(/iPad/i) ||
+            navigator.userAgent.match(/iPod/i) ||
+            navigator.userAgent.match(/BlackBerry/i) ||
+            navigator.userAgent.match(/Windows Phone/i) ||
+            navigator.userAgent.match(/Trident/i) ||
+            $( window ).width() < 1024
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    if (detectmob()) {
+
+        $('.scroll').on('click', function () {
+            event.preventDefault();
+            var el = $(this);
+            var dest = el.attr('href');
+            if (dest !== undefined && dest !== '') {
+                $('body').removeClass('blocked');
+                $('html').animate({
+                        scrollTop: $(dest).offset().top 
+                    }, 500
+                );
+            }
+            return false;
+        });
+
+    } else {
+        $('#fullpage').fullpage({
+            navigation: false,
+        });
+
+        function fullpage_toggle() {
+            $.fn.fullpage.setMouseWheelScrolling(toggle);
+            $.fn.fullpage.setAllowScrolling(toggle);
+            $.fn.fullpage.setKeyboardScrolling(toggle);
+        }
+
+        $('.scroll').on('click', function () {
+            event.preventDefault();
+            var el = $(this);
+            var dest = el.data('slide');
+            $.fn.fullpage.moveTo(dest);
+            return false;
+        });
+
+    }
+
+
+
     var swiper = new Swiper('.swiper-container.articles', {
         slidesPerView: 'auto',
         spaceBetween: 0
@@ -162,18 +218,7 @@ $(document).ready(function() {
     }
 
 
-    $('.scroll').on('click', function () {
-        var el = $(this);
-        var dest = el.attr('href'); // получаем направление
-        if (dest !== undefined && dest !== '') { // проверяем существование
-            $('body').removeClass('blocked');
-            $('html').animate({
-                    scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-                }, 500 // скорость прокрутки
-            );
-        }
-        return false;
-    });
+
 
 
 
@@ -301,9 +346,3 @@ function nextQuest() {
         });
     }
 }
-
-new fullpage('#fullpage', {
-
-});
-
-//fullpage_api.setAllowScrolling(false);
