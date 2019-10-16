@@ -5,6 +5,7 @@
 //= libs/jquery.fancybox.min.js
 //= libs/perfect-scrollbar.min.js
 //= libs/jquery.touchSwipe.min.js
+//= libs/scrolloverflow.min.js
 //= libs/fullpage.min.js
 
 

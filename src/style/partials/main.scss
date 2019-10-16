@@ -22,8 +22,11 @@ body{
 .section-1{
 	background: url("../img/header_bg.jpg") center top no-repeat;
 	background-size: 100% auto;
-	padding-top: 3.4375vw;
-	min-height: 44.427083vw;
+
+	//min-height: 44.427083vw;
+	.container{
+		padding-top: 3.4375vw;
+	}
 	.header-row{
 		display: flex;
 		justify-content: space-between;
@@ -67,7 +70,7 @@ body{
 
 	.header-title{
 		width: 46.25vw;
-		margin-top: 5.10417vw;
+		margin-top: 5.31417vw;
 		.big{
 			font-family: $font2;
 			color: #ffffff;
@@ -94,7 +97,7 @@ body{
 		width: 29.635416vw;
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: 3.4375vw;
 		img{
 			width: 100%;
 			display: block;
@@ -144,7 +147,7 @@ body{
 	border-top: 1px solid #00202b;
 	border-bottom: 1px solid #00202b;
 	padding: 1.406vw 0;
-	margin-top: 3.958333vw;
+	//margin-top: 3.958333vw;
 	.container{
 		display: flex;
 		align-items: center;
@@ -172,7 +175,7 @@ body{
 .section-3{
 	width: 100%;
 	overflow: hidden;
-	padding-bottom: 7.2916vw;
+	//padding-bottom: 7.2916vw;
 	padding-top: 2.083vw;
 
 	.mobile-text{
@@ -401,9 +404,9 @@ body{
 
 .section-4{
 	width: 100%;
-	padding: 3.4375vw 0 5.2083vw;
 	background-color: #f3ecdc;
 	.test{
+		padding: 3.4375vw 0 1vw;
 		.top-line{
 			display: flex;
 			align-items: center;
@@ -506,6 +509,7 @@ body{
 	.results{
 		display: none;
 		min-height: 48.9583vw;
+		padding: 3.4375vw 0 5.2083vw;
 		.logo{
 			width: 5.72916vw;
 			position: absolute;

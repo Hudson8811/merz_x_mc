@@ -7,9 +7,9 @@ $(document).ready(function() {
             navigator.userAgent.match(/iPod/i) ||
             navigator.userAgent.match(/BlackBerry/i) ||
             navigator.userAgent.match(/Windows Phone/i) ||
-            navigator.userAgent.match(/Trident/i) ||
             $( window ).width() < 1024
         ) {
+            alert(navigator.userAgent);
             return true;
         } else {
             return false;
@@ -25,7 +25,7 @@ $(document).ready(function() {
             if (dest !== undefined && dest !== '') {
                 $('body').removeClass('blocked');
                 $('html').animate({
-                        scrollTop: $(dest).offset().top 
+                        scrollTop: $(dest).offset().top
                     }, 500
                 );
             }
@@ -35,12 +35,19 @@ $(document).ready(function() {
     } else {
         $('#fullpage').fullpage({
             navigation: false,
+            verticalCentered: false,
+            scrollOverflow: true,
+            scrollOverflowOptions: {
+                scrollbars: false,
+
+            }
         });
 
         function fullpage_toggle() {
             $.fn.fullpage.setMouseWheelScrolling(toggle);
             $.fn.fullpage.setAllowScrolling(toggle);
             $.fn.fullpage.setKeyboardScrolling(toggle);
+            //fullpage_api.setAllowScrolling(false, 'down');
         }
 
         $('.scroll').on('click', function () {
@@ -251,14 +258,16 @@ function nextQuest() {
         }
     } else {
         $('.results .img-block').html($('.test-main .img-block').html());
-        $('.test').slideUp();
         if (otvet1 > otvet2){
             $('.results1').show();
         } else {
             $('.results2').show();
         }
-        $('.results').slideDown();
-
+        $('.test').fadeOut(500,function() {
+            $('.results').fadeIn(500,function(){
+                $.fn.fullpage.reBuild();
+            });
+        });
 
         //отправка данных
         var resultSend = JSON.stringify( testResults );

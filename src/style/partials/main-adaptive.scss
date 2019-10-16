@@ -7,8 +7,10 @@
 
   .section-1{
     background-size: auto 123.75vw;
-    padding-top: 5.625vw;
     min-height: 0;
+    .container{
+      padding-top: 5.625vw;
+    }
     .header-row{
       width: 100%;
       .logo{
@@ -189,9 +191,9 @@
   }
 
   .section-4{
-    padding: 13.125vw 0 18.75vw;
     min-height: 0;
     .test{
+      padding: 13.125vw 0 18.75vw;
       .top-line{
         display: block;
         .logo{
@@ -252,6 +254,7 @@
       }
     }
     .results{
+      padding: 13.125vw 0 18.75vw;
       .logo{
         display: none;
       }

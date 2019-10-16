@@ -45,7 +45,7 @@ html.fp-enabled,
 }
 .fp-tableCell {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     width: 100%;
     height: 100%;
 }
@@ -233,4 +233,9 @@ html.fp-enabled,
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+.iScrollIndicator,
+.fp-scroller {
+    transition-duration: 300ms !important;
+    transition-timing-function: linear;
 }
