@@ -32,10 +32,18 @@ body{
 		.logo{
 			width: 9.427083vw;
 			display: block;
+			img{
+				display: block;
+				width: 100%;
+			}
 		}
 		.brand{
 			width: 5.72916vw;
 			display: block;
+			img{
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 
@@ -106,6 +114,15 @@ body{
 			font-weight: 500;
 			letter-spacing: 0.10416px;
 			text-transform: uppercase;
+			display: block;
+			a{
+				color: #00202b;
+				&:hover{
+					font-weight: 700;
+					border-bottom: 2px solid #ff5900;
+				}
+			}
+
 		}
 		.arrow-down{
 			margin-top: 1.30208vw;
@@ -392,6 +409,11 @@ body{
 			align-items: center;
 			.logo{
 				width: 5.72916vw;
+				display: block;
+				img{
+					display: block;
+					width: 100%;
+				}
 			}
 			.title{
 				margin-left: 4.53125vw;
@@ -489,6 +511,11 @@ body{
 			position: absolute;
 			left: 0;
 			top: 0;
+			display: block;
+			img{
+				display: block;
+				width: 100%;
+			}
 		}
 		.title-mobile{
 			display: none;
