@@ -15,6 +15,16 @@
     font-weight: 500;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Futura PT';
+    src: local('Futura PT Light'), local('FuturaPT-Light'),
+    url('../fonts/FuturaPT-Light.woff2') format('woff2'),
+    url('../fonts/FuturaPT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
 /*
 @font-face {
     font-family: 'Futura PT';
@@ -25,14 +35,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Futura PT';
-    src: local('Futura PT Light'), local('FuturaPT-Light'),
-    url('../fonts/FuturaPT-Light.woff2') format('woff2'),
-    url('../fonts/FuturaPT-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Futura PT Cond';

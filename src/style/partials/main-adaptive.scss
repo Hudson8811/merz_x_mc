@@ -8,6 +8,9 @@
   .section-1{
     background-size: auto 123.75vw;
     min-height: 0;
+    &::before{
+      height: 123.75vw;
+    }
     .container{
       padding-top: 5.625vw;
     }
@@ -34,6 +37,7 @@
       .small{
         font-size: 4.0625vw;
         letter-spacing: 1.546875vw;
+        color: #ffffff;
       }
     }
 
@@ -337,12 +341,19 @@
   }
 
   .copy{
-    padding: 5.625vw 0 21.25vw;
+    padding: 5.625vw 0 25.552vw;
     .text{
       font-size: 3.75vw;
       letter-spacing: 0.375vw;
     }
+    .disclaimer{
+      margin-top: 6.25vw;
+      font-size: 8.65832vw;
+      line-height: 1;
+      letter-spacing: 1vw;
+    }
   }
+
 
 
   .fancybox-content.right{

@@ -22,6 +22,18 @@ body{
 .section-1{
 	background: url("../img/header_bg.jpg") center top no-repeat;
 	background-size: 100% auto;
+	position: relative;
+	&::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 26.04vw;
+		background: #1B141B;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
 
 	//min-height: 44.427083vw;
 	.container{
@@ -121,7 +133,6 @@ body{
 			a{
 				color: #00202b;
 				&:hover{
-					font-weight: 700;
 					border-bottom: 2px solid #ff5900;
 				}
 			}
@@ -268,6 +279,7 @@ body{
 			height: 26.04166vw;
 			min-height: 26.04166vw;
 			width: auto;
+			margin-bottom: 1px;
 			&:last-child{
 				margin-right: 4.947916vw;
 			}
@@ -642,7 +654,7 @@ body{
 
 .copy{
 	height: auto !important;
-	padding: 0.92vw  0;
+	padding: 0.92vw  0 2.552vw;
 	.text{
 		text-align: center;
 		opacity: 0.5;
@@ -651,5 +663,16 @@ body{
 		font-weight: 500;
 		text-transform: uppercase;
 		letter-spacing: 0.09vw;
+	}
+	.disclaimer{
+		margin-top: 1.5625vw;
+		text-align: center;
+		opacity: 0.5;
+		color: #00202b;
+		font-size: 3.66458vw;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: .3vw;
+		line-height: 0.8;
 	}
 }

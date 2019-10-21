@@ -44,6 +44,9 @@ $(document).ready(function() {
                     fullpage_toggle(true);
                 }
                 if(destination.index == 1){
+                    fullpage_toggle(true);
+                }
+                if(destination.index == 2){
                     fullpage_toggle(false);
                     if (swiper.activeIndex == 0){
                         fullpage_toggle(true,'up');
@@ -52,7 +55,7 @@ $(document).ready(function() {
                         fullpage_toggle(true,'down');
                     }
                 }
-                if(destination.index == 2){
+                if(destination.index == 4){
                     fullpage_toggle(true);
                 }
             }
@@ -124,6 +127,8 @@ $(document).ready(function() {
                 setTimeout(function () {
                     fullpage_toggle(true, 'up');
                 }, 100)
+            } else {
+                $.fn.fullpage.moveTo(3);
             }
         }
 
