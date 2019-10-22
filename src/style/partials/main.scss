@@ -412,6 +412,18 @@ body{
 			}
 		}
 	}
+
+	.disclaimer{
+		margin-top: 1vw;
+		text-align: center;
+		opacity: 0.5;
+		color: #00202b;
+		font-size: 3.66458vw;
+		font-weight: 300;
+		text-transform: uppercase;
+		letter-spacing: .3vw;
+		line-height: 0.8;
+	}
 }
 
 .section-4{
@@ -664,15 +676,5 @@ body{
 		text-transform: uppercase;
 		letter-spacing: 0.09vw;
 	}
-	.disclaimer{
-		margin-top: 1.5625vw;
-		text-align: center;
-		opacity: 0.5;
-		color: #00202b;
-		font-size: 3.66458vw;
-		font-weight: 300;
-		text-transform: uppercase;
-		letter-spacing: .3vw;
-		line-height: 0.8;
-	}
+
 }
