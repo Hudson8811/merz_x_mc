@@ -439,7 +439,7 @@ body{
 	}
 
 	.address-block{
-		margin-top: 2vw;
+		margin-top: 1vw;
 		text-align: center;
 		opacity: 0.5;
 		color: #00202b;
@@ -450,18 +450,17 @@ body{
 	}
 
 	.disclaimer{
-		margin-top: 1vw;
-		margin-bottom: 1vw;
+		margin-top: 0.2vw;
+		margin-bottom: 0.2vw;
 		text-align: center;
 		opacity: 0.5;
 		color: #00202b;
-		font-size: 3.66458vw;
+		font-size: 2.5vw;
 		font-weight: 300;
 		text-transform: uppercase;
 		letter-spacing: .3vw;
 		line-height: 0.8;
 		+.address-block{
-			margin-bottom: 1vw;
 			margin-top: 0;
 		}
 	}
