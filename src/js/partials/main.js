@@ -111,6 +111,7 @@ $(document).ready(function() {
         var target = $('.tabs .tab[data-cat="'+cat+'"]');
         $(".button-prev").appendTo(target);
         $(".button-next").appendTo(target);
+        $(".home").appendTo(target);
         $('.tabs .tab').removeClass('active');
         target.addClass('active');
         var first = $('.tabs .swiper-wrapper').offset().left;
@@ -153,6 +154,12 @@ $(document).ready(function() {
         }
     });
 
+    $('.home').click(function () {
+        var cat = $(this).parent().data('cat');
+        $('.articles').find('.swiper-slide[data-cat="'+cat+'"]').first().addClass('goTo');
+        swiper.slideTo(getSlideIndexByClass('goTo'));
+    });
+
 
     $(".tabs .swiper-wrapper").swipe( {
         swipe:function(event, direction, distance, duration, fingerCount){
@@ -179,6 +186,7 @@ $(document).ready(function() {
         swiper.slideTo(getSlideIndexByClass('goTo'));
         $(".button-prev").appendTo(target);
         $(".button-next").appendTo(target);
+        $(".home").appendTo(target);
         $('.tabs .tab').removeClass('active');
         target.addClass('active');
 

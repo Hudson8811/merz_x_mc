@@ -92,9 +92,12 @@
       }
       .right{
         margin-left: 0;
-        a{
+        a.scroll{
           color: #ffffff;
           border: none;
+        }
+        .brand{
+          display: none;
         }
       }
     }
@@ -110,7 +113,7 @@
       font-size: 4.6875vw;
       font-weight: 400;
       line-height: 6.5625vw;
-      margin-bottom: 6.25vw;
+      margin-bottom: 13.25vw;
     }
 
     .tabs{
@@ -142,6 +145,12 @@
       }
       .button-prev{
         left: -10.9vw;
+      }
+      .home{
+        width: 9.375vw;
+        height: 9.375vw;
+        top: -10.3125vw;
+        margin-left: -4.6875vw;
       }
     }
 
@@ -197,10 +206,23 @@
 
 
     .disclaimer{
-      margin-top: 6.25vw;
+      margin-top: 3vw;
+      margin-bottom: 3vw;
       font-size: 8.65832vw;
       line-height: 1;
       letter-spacing: 1vw;
+    }
+
+    .address-block{
+      margin-top: 8vw;
+      font-size: 4vw;
+      line-height: 1.2;
+    }
+
+    .disclaimer{
+      +.address-block{
+        margin-top: 0;
+      }
     }
   }
 

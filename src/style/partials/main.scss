@@ -157,7 +157,7 @@ body{
 	width: 100%;
 	border-top: 1px solid #00202b;
 	border-bottom: 1px solid #00202b;
-	padding: 1.406vw 0;
+	padding: 0.406vw 0;
 	//margin-top: 3.958333vw;
 	.container{
 		display: flex;
@@ -172,11 +172,22 @@ body{
 		}
 		.right{
 			margin-left: 0.572916vw;
-			a{
+			display: flex;
+			align-items: center;
+			a.scroll{
 				color: #00202b;
 				border-bottom: 2px solid #ff5900;
 				&:hover{
 					border-color: transparent;
+				}
+			}
+			.brand{
+				width: 5.72916vw;
+				display: block;
+				margin-left: 3vw;
+				img{
+					display: block;
+					width: 100%;
 				}
 			}
 		}
@@ -194,6 +205,7 @@ body{
 	}
 	.tabs{
 		padding-left: 20.052vw;
+		overflow: visible;
 		.tab{
 			width: auto;
 			height: 1.302vw;
@@ -240,6 +252,20 @@ body{
 		.button-prev{
 			background-image: url("../img/icon-left.png");
 			left: -2.3958vw;
+		}
+		.home{
+			cursor: pointer;
+			width: 1.5625vw;
+			height: 1.5625vw;
+			display: block;
+			top: -1.71875vw;
+			left: 50%;
+			margin-left: -0.78125vw;
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-image: url("../img/home.svg");
 		}
 	}
 
@@ -412,8 +438,20 @@ body{
 		}
 	}
 
+	.address-block{
+		margin-top: 2vw;
+		text-align: center;
+		opacity: 0.5;
+		color: #00202b;
+		font-size: 1vw;
+		font-weight: 300;
+		text-transform: uppercase;
+		line-height: 0.8;
+	}
+
 	.disclaimer{
 		margin-top: 1vw;
+		margin-bottom: 1vw;
 		text-align: center;
 		opacity: 0.5;
 		color: #00202b;
@@ -422,6 +460,10 @@ body{
 		text-transform: uppercase;
 		letter-spacing: .3vw;
 		line-height: 0.8;
+		+.address-block{
+			margin-bottom: 1vw;
+			margin-top: 0;
+		}
 	}
 }
 
