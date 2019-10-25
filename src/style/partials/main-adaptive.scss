@@ -222,9 +222,20 @@
         &.video-block{
           width: 60vw;
           .flipper{
-            height: 79vw;
+            min-height: 125vw;
+            .front{
+              display: block;
+              height: auto;
+              .cat{
+                display: none;
+              }
+            }
+            .back{
+              height: 80vw;
+            }
+
           }
-          .cat{
+          >.cat{
             display: block;
             font-size: 3.75vw;
             letter-spacing: 0.375vw;
