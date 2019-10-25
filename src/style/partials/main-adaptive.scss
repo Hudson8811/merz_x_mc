@@ -60,6 +60,7 @@
       }
       .arrow-down{
         margin-top: 7.5vw;
+        margin-bottom: 7.5vw;
         a{
           width: 8.4375vw;
           height: 8.4375vw;
@@ -119,7 +120,7 @@
     .tabs{
       padding-left: 17.1875vw;
       .tab{
-        height: 7.8125vw;
+        height: 15.62vw;
         font-size: 4.6875vw;
         letter-spacing: 0.35vw;
         line-height: 7.8125vw;
@@ -154,22 +155,33 @@
       }
     }
 
-    .tabs-title{
-      span{
-        font-size: 16.5625vw;
-        margin-left: 0;
-        margin-bottom: 6.25vw;
-      }
-    }
+
 
     .slider{
       padding-left: 6.25vw;
       box-sizing: border-box;
+      margin-top: 6vw;
+      .slider-direction{
+        display: flex;
+        font-size: 3vw;
+        line-height: 0.8;
+        align-items: center;
+        justify-content: flex-end;
+        color: #f96000;
+        font-weight: 500;
+        margin: 0 3vw 5vw;
+        img{
+          display: block;
+          width: 5vw;
+          margin-left: 3vw;
+        }
+      }
       .info{
         display: none;
       }
       .item{
         margin-left: 0;
+        margin-top:7vw;
         +.item{
           margin-left: 16.5625vw;
         }
@@ -188,17 +200,41 @@
           padding: 6.25vw 0;
           height: auto;
           display: block !important;
+          position: static;
           .cat{
             font-size: 3.75vw;
             letter-spacing: 0.375vw;
+            position: absolute;
+            left: 0;
+            top: -7vw;
+            white-space: nowrap;
           }
           .title{
             font-size: 8.75vw;
-            margin: 4.6875vw 0;
+            margin: 0 0 4.6875vw;
           }
           .more{
             font-size: 4.6875vw;
             letter-spacing: 0.46vw;
+          }
+        }
+
+        &.video-block{
+          width: 60vw;
+          .flipper{
+            height: 79vw;
+          }
+          .cat{
+            display: block;
+            font-size: 3.75vw;
+            letter-spacing: 0.375vw;
+            position: absolute;
+            left: 0;
+            top: -7vw;
+            white-space: nowrap;
+            color: #7f8f95;
+            font-weight: 500;
+            text-transform: uppercase;
           }
         }
       }
@@ -398,10 +434,13 @@
       line-height: 1;
       margin: 6.25vw 0;
       a{
-        color: #00202b;
-        &:hover{
-          color: #ff5900;
-        }
+        width: 8vw;
+        height: 8vw;
+        background: url("../img/play.png") center center no-repeat;
+        background-size: contain;
+        margin-left: 2vw;
+        vertical-align: bottom;
+        display: inline-block;
       }
     }
     .more{

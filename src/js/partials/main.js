@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     function detectmob() {
         if (navigator.userAgent.match(/Android/i) ||
             navigator.userAgent.match(/webOS/i) ||
@@ -23,7 +25,7 @@ $(document).ready(function() {
             var dest = el.attr('href');
             if (dest !== undefined && dest !== '') {
                 $('body').removeClass('blocked');
-                $('html').animate({
+                $('html,body').animate({
                         scrollTop: $(dest).offset().top
                     }, 500
                 );
@@ -183,7 +185,11 @@ $(document).ready(function() {
     function changeTab(target) {
         var cat = target.data('cat');
         $('.articles').find('.swiper-slide[data-cat="'+cat+'"]').first().addClass('goTo');
-        swiper.slideTo(getSlideIndexByClass('goTo'));
+        if (!detectmob()) {
+            swiper.slideTo(getSlideIndexByClass('goTo'));
+        } else {
+            swiper.slideTo(getSlideIndexByClass('goTo') - 1);
+        }
         $(".button-prev").appendTo(target);
         $(".button-next").appendTo(target);
         $(".home").appendTo(target);
@@ -231,10 +237,12 @@ $(document).ready(function() {
 
 
 
-    $('.articles .item').click(function () {
+    $('.articles .item:not(.video-block)').click(function () {
        if ($( window ).width() < 1024){
+           $('.fancy-block').html($(this).find('.right').html());
+
            $.fancybox.open({
-               src  : $(this).find('.right'),
+               src  : $('.fancy-block'),
                type : 'inline',
                animationEffect: "zoom-in-out",
            });
