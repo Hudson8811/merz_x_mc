@@ -333,14 +333,14 @@ body {
 		.button-next {
 			right: -2.3958vw;
 
-			background: url("../img/icon-right.png") no-repeat center center;
+			background-image: url("../img/icon-right.png") no-repeat center center;
 			background-size: contain;
 		}
 
 		.button-prev {
 			left: -2.3958vw;
 
-			background: url("../img/icon-left.png") no-repeat center center;
+			background-image: url("../img/icon-left.png") no-repeat center center;
 			background-size: contain;
 		}
 
@@ -381,16 +381,11 @@ body {
 
 			margin: 0 3vw 5vw;
 
-			transition: opacity .2s;
-
 			color: #f96000;
 
 			font-weight: 500;
 			font-size: 3vw;
 			line-height: .8;
-			&.hidden{
-				opacity: 0;
-			}
 		}
 
 		.info {

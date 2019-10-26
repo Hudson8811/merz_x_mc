@@ -238,7 +238,7 @@
           .title{
             margin: 0 0 4.6875vw;
 
-            font-size: 5.75vw;
+            font-size: 8.75vw;
           }
           .more{
             letter-spacing: 0.46vw;
@@ -305,6 +305,7 @@
     .disclaimer{
       +.address-block{
         margin-top: 0;
+        padding-bottom: 180px;
       }
     }
   }
