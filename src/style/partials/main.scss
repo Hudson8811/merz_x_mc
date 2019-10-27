@@ -234,6 +234,16 @@ body{
 					margin-left: 6.25vw;
 				}
 			}
+			&:first-child {
+				.button-prev{
+					display: none;
+				}
+			}
+			&:last-child {
+				.button-next{
+					display: none;
+				}
+			}
 		}
 		.button-next,
 		.button-prev{
@@ -272,9 +282,25 @@ body{
 
 	.slider{
 		width: 100%;
-		margin-top: 3vw;
+		margin-top: 2vw;
 		.slider-direction{
-			display: none;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin: 0 1.5vw 1vw;
+			color: #f96000;
+			font-weight: 500;
+			font-size: 1vw;
+			line-height: .8;
+			transition: opacity 0.2s linear;
+			&.hidden{
+				opacity: 0;
+			}
+			img{
+				display: block;
+				width: 1.7vw;
+				margin-left: 1vw;
+			}
 		}
 		.info{
 			width: 9.375vw;

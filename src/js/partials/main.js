@@ -1,5 +1,7 @@
+
 $(document).ready(function() {
 
+    resizer = '';
 
     function detectmob() {
         if (navigator.userAgent.match(/Android/i) ||
@@ -17,69 +19,6 @@ $(document).ready(function() {
         }
     }
 
-    if (detectmob()) {
-
-        $('.scroll').on('click', function () {
-            event.preventDefault();
-            var el = $(this);
-            var dest = el.attr('href');
-            if (dest !== undefined && dest !== '') {
-                $('body').removeClass('blocked');
-                $('html,body').animate({
-                        scrollTop: $(dest).offset().top
-                    }, 500
-                );
-            }
-            return false;
-        });
-
-    } else {
-        $('#fullpage').fullpage({
-            navigation: false,
-            verticalCentered: false,
-            scrollOverflow: true,
-            scrollOverflowOptions: {
-                scrollbars: false,
-            },
-            onLeave: function (origin, destination, direction) {
-                if(destination.index == 0){
-                    fullpage_toggle(true);
-                }
-                if(destination.index == 1){
-                    fullpage_toggle(true);
-                }
-                if(destination.index == 2){
-                    fullpage_toggle(false);
-                    if (swiper.activeIndex == 0){
-                        fullpage_toggle(true,'up');
-                    }
-                    if (swiper.isEnd){
-                        fullpage_toggle(true,'down');
-                    }
-                }
-                if(destination.index == 4){
-                    fullpage_toggle(true);
-                }
-            }
-        });
-
-        function fullpage_toggle(toggle, direction) {
-            $.fn.fullpage.setAllowScrolling(toggle, direction);
-            $.fn.fullpage.setKeyboardScrolling(toggle, direction);
-        }
-
-        $('.scroll').on('click', function () {
-            event.preventDefault();
-            var el = $(this);
-            var dest = el.data('slide');
-            $.fn.fullpage.moveTo(dest);
-            return false;
-        });
-
-    }
-
-
-
     var swiper = new Swiper('.swiper-container.articles', {
         slidesPerView: 'auto',
         spaceBetween: 0,
@@ -88,6 +27,14 @@ $(document).ready(function() {
         mousewheel: {
             invert: false,
             releaseOnEdges:true,
+        },
+        breakpoints: {
+            0: {
+                autoHeight: true
+            },
+            1023: {
+                autoHeight: false,
+            },
         },
         on:{
             reachBeginning: function () {
@@ -101,11 +48,102 @@ $(document).ready(function() {
                 if (!detectmob()) {
                     setTimeout(function () {
                         fullpage_toggle(true,'down');
-                    },100)
+                    },100);
+                    $('.slider-direction').addClass('hidden');
                 }
+            },
+            fromEdge: function () {
+                $('.slider-direction').removeClass('hidden');
+            },
+            resize: function () {
+                $('.swiper-wrapper').height('');
             }
         }
     });
+
+    function detectFun(){
+        if (detectmob()) {
+            $('.scroll').on('click', function () {
+                event.preventDefault();
+                var el = $(this);
+                var dest = el.attr('href');
+                if (dest !== undefined && dest !== '') {
+                    $('body').removeClass('blocked');
+                    $('html,body').animate({
+                            scrollTop: $(dest).offset().top
+                        }, 500
+                    );
+                }
+                return false;
+            });
+            resizer = 'mobile';
+            $('.swiper-slide.info').addClass('not-swiper-slide').removeClass('swiper-slide');
+        } else {
+            $('#fullpage').fullpage({
+                navigation: false,
+                verticalCentered: false,
+                scrollOverflow: true,
+                scrollOverflowOptions: {
+                    scrollbars: false,
+                },
+                onLeave: function (origin, destination, direction) {
+                    if(destination.index == 0){
+                        fullpage_toggle(true);
+                    }
+                    if(destination.index == 1){
+                        fullpage_toggle(true);
+                    }
+                    if(destination.index == 2){
+                        fullpage_toggle(false);
+                        if (swiper.activeIndex == 0){
+                            fullpage_toggle(true,'up');
+                        }
+                        if (swiper.isEnd){
+                            fullpage_toggle(true,'down');
+                        }
+                    }
+                    if(destination.index == 4){
+                        fullpage_toggle(true);
+                    }
+                }
+            });
+
+            $('.scroll').on('click', function () {
+                event.preventDefault();
+                var el = $(this);
+                var dest = el.data('slide');
+                $.fn.fullpage.moveTo(dest);
+                return false;
+            });
+            resizer = 'pc';
+            $('.not-swiper-slide.info').addClass('swiper-slide').removeClass('not-swiper-slide');
+        }
+    }
+
+    detectFun();
+
+    function fullpage_toggle(toggle, direction) {
+        $.fn.fullpage.setAllowScrolling(toggle, direction);
+        $.fn.fullpage.setKeyboardScrolling(toggle, direction);
+    }
+
+
+
+    $(window).on('resize', function () {
+        if (detectmob() && resizer=='pc'){
+            $.fn.fullpage.destroy('all');
+            $('.scroll').unbind();
+            detectFun();
+        }
+        if (!detectmob() && resizer=='mobile'){
+            $('.scroll').unbind();
+            detectFun();
+        }
+    });
+
+
+
+
 
     swiper.on('slideChangeTransitionStart', function () {
         var cat = $('.swiper-slide-active').data('cat');
@@ -185,11 +223,7 @@ $(document).ready(function() {
     function changeTab(target) {
         var cat = target.data('cat');
         $('.articles').find('.swiper-slide[data-cat="'+cat+'"]').first().addClass('goTo');
-        if (!detectmob()) {
-            swiper.slideTo(getSlideIndexByClass('goTo'));
-        } else {
-            swiper.slideTo(getSlideIndexByClass('goTo') - 1);
-        }
+        swiper.slideTo(getSlideIndexByClass('goTo'));
         $(".button-prev").appendTo(target);
         $(".button-next").appendTo(target);
         $(".home").appendTo(target);

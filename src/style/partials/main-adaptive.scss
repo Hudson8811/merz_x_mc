@@ -162,16 +162,9 @@
       box-sizing: border-box;
       margin-top: 6vw;
       .slider-direction{
-        display: flex;
         font-size: 3vw;
-        line-height: 0.8;
-        align-items: center;
-        justify-content: flex-end;
-        color: #f96000;
-        font-weight: 500;
         margin: 0 3vw 5vw;
         img{
-          display: block;
           width: 5vw;
           margin-left: 3vw;
         }
@@ -187,7 +180,7 @@
         }
         display: block;
         height: auto;
-        min-height: 125vw;
+        min-height: 0;
         width: 60vw;
         &:last-child{
           margin-right: 16.5625vw;
