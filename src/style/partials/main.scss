@@ -632,8 +632,13 @@ body{
 				top: 8.17708vw;
 				line-height: 1;
 				user-select: none;
+				transition: all 0.4s ease;
 				&:hover{
 					border-color: #ff5900;
+				}
+				&.light{
+					background: #f96000;
+					color: #ffffff;
 				}
 			}
 			.left{

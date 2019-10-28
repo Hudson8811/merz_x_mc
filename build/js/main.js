@@ -71,26 +71,27 @@ function(l,c){l.fp_scrolloverflow=function(){l.IScroll||(l.IScroll=module.export
 
 /* my scripts */
 
+function detectmob() {
+    if (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i) ||
+        $( window ).width() < 1024
+    ) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 $(document).ready(function() {
 
     resizer = '';
 
-    function detectmob() {
-        if (navigator.userAgent.match(/Android/i) ||
-            navigator.userAgent.match(/webOS/i) ||
-            navigator.userAgent.match(/iPhone/i) ||
-            navigator.userAgent.match(/iPad/i) ||
-            navigator.userAgent.match(/iPod/i) ||
-            navigator.userAgent.match(/BlackBerry/i) ||
-            navigator.userAgent.match(/Windows Phone/i) ||
-            $( window ).width() < 1024
-        ) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
 
     var swiper = new Swiper('.swiper-container.articles', {
         slidesPerView: 'auto',
@@ -150,7 +151,7 @@ $(document).ready(function() {
                 return false;
             });
             resizer = 'mobile';
-            $('.swiper-slide.info').addClass('not-swiper-slide').removeClass('swiper-slide');
+            $('.swiper-slide.info').addClass('not-swiper-slide').removeClass('swiper-slide').removeClass('swiper-slide-active ');
         } else {
             $('#fullpage').fullpage({
                 navigation: false,
@@ -222,6 +223,7 @@ $(document).ready(function() {
         var cat = $('.swiper-slide-active').data('cat');
         if (!cat) cat = 1;
         var target = $('.tabs .tab[data-cat="'+cat+'"]');
+        console.log(cat);
         $(".button-prev").appendTo(target);
         $(".button-next").appendTo(target);
         $(".home").appendTo(target);
@@ -243,6 +245,12 @@ $(document).ready(function() {
                 }, 100)
             } else {
                 $.fn.fullpage.moveTo(3);
+            }
+        } else {
+            if ((swiper.activeIndex - 1) == (swiper.slides.length - 2)){
+                $('.slider-direction').addClass('hidden');
+            } else {
+                $('.slider-direction').removeClass('hidden');
             }
         }
 
@@ -385,32 +393,50 @@ $.getJSON('test.json', function(data) {
     }
 });
 
+
 $('.test-main .left, .test-main .right').hover(function () {
-    if (isImg == 1){
-        var value = $(this).data('value');
-        var img = $(this).data('img');
-        $('.test-main .img-block .'+img+'[data-value="'+value+'"]').addClass('hover');
+    if (!detectmob()) {
+        if (isImg == 1){
+            var value = $(this).data('value');
+            var img = $(this).data('img');
+            $('.test-main .img-block .'+img+'[data-value="'+value+'"]').addClass('hover');
+        }
     }
 },function() {
-    $('.test-main .img-block img').removeClass('hover');
+    if (!detectmob()) {
+        $('.test-main .img-block img').removeClass('hover');
+    }
 });
 
 testResults = [];
 
+disabledBtn = false;
+
 $('.test-main .left, .test-main .right').click(function () {
-    var value = $(this).data('value');
-    if (isImg == 1){
-        var img = $(this).data('img');
-        $('.test-main .img-block .'+img+'[data-value="'+value+'"]').addClass('active');
+    if (!disabledBtn) {
+        disabledBtn = true;
+        var value = $(this).data('value');
+        if (isImg == 1) {
+            var img = $(this).data('img');
+            $('.test-main .img-block .' + img + '[data-value="' + value + '"]').addClass('active');
+        }
+        if (value == 1) {
+            otvet1++;
+            testResults.push(value);
+        } else {
+            otvet2++;
+            testResults.push(value);
+        }
+        if (!detectmob()) {
+            $(this).addClass('light');
+            setTimeout(function () {
+                $('.test-main .left, .test-main .right').removeClass('light');
+                nextQuest();
+            }, 1000)
+        } else {
+            nextQuest();
+        }
     }
-    if (value == 1){
-        otvet1++;
-        testResults.push(value);
-    } else {
-        otvet2++;
-        testResults.push(value);
-    }
-    nextQuest();
 });
 
 
@@ -457,4 +483,5 @@ function nextQuest() {
             }
         });
     }
+    disabledBtn = false;
 }
