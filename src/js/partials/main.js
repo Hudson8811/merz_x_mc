@@ -16,7 +16,6 @@ function detectmob() {
 
 $(document).ready(function() {
 
-    $('#preloader').fadeOut('slow');
 
     resizer = '';
 
@@ -320,6 +319,9 @@ $.getJSON('test.json', function(data) {
     if (img != "") {
         isImg = 1;
     }
+
+
+    $('#preloader').fadeOut('slow');
 });
 
 
