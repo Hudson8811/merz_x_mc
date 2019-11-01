@@ -89,6 +89,8 @@ function detectmob() {
 
 $(document).ready(function() {
 
+    $('#preloader').fadeOut('slow');
+
     resizer = '';
 
 
